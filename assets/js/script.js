@@ -6,7 +6,7 @@ var hits = 0;
 var numberOfGuesses = 0;
 var isSunk = false;
 var stats = "You took " + numberOfGuesses + " guesses to sink the battleship, " +
-"which means your shooting accuracy was " + (numberOfGuesses);
+"which means your shooting accuracy was " + (3/numberOfGuesses);
 
 while (isSunk == false) {
     guess = prompt("Ready, aim, fire! (enter a number from 0-6):");
@@ -14,6 +14,7 @@ while (isSunk == false) {
         alert("Please enter a valid cell number!");
     } else {
         numberOfGuesses = numberOfGuesses + 1;
+    }
         if (guess == location1 || guess == location2 || guess == location3) {
             hits = hits + 1;
             alert("Hi!")
@@ -26,6 +27,6 @@ while (isSunk == false) {
                 alert("You sank my battleship!");
             }
         }
-    }
+    
 
 alert(stats);
